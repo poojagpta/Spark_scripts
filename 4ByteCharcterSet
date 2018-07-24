@@ -1,0 +1,5 @@
+val s="Añ庆𦘦B"
+val codePointsIndexSeq = (0 to s.codePointCount(0, s.length)).map(c => input.offsetByCodePoints(0, c))
+
+//find substring (0,1), (1,2),(2,3),(3,5),(5,6)
+val strArray = codePointsIndexSeq.sliding(2).map(w => s.substring(w.head, w.last)).toArray
