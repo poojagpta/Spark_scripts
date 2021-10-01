@@ -29,4 +29,8 @@ In case of Streaming Lift:
 
 Probability( 97.5) == Z score of (1.96)
 
+Z-Score = (mean A - mean B)/ standard error
+
+https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/what-is-the-standard-error-of-a-sample/
+
 (RateA - RateB)/ sqroot( pow(a.stdv,2)/a.activation+ pow(b.stdv,2)/b.activation) )>1.96
