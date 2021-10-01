@@ -13,7 +13,22 @@ def sparse_matrix_multiplication(A, B):
     arr[rA]=l
   return arr  
 
+def sparse_matrix_multiplication2(A, B):
+  rows,cols = (len(A),len(B[0]))
+  arr = [[0]*cols]*rows
+  for rA in range(0, len(A)): 
+    rowA= A[rA]
+    l=[]
+    for cb in range(0, len(B[0])):
+      colB = [row[cb] for row in B]
+      arr_sum = sum(map(lambda x,y: x*y, rowA, colB))
+      l.append(arr_sum)
+    arr[rA]=l
+  return arr 
+
+
 A = [ [ 1, 0, 0], [-1, 0, 3] ]
 B = [ [ 7, 0, 0 ], [ 0, 0, 0 ], [ 0, 0, 1 ] ]
 
 sparse_matrix_multiplication(A,B)
+sparse_matrix_multiplication2(A,B)
