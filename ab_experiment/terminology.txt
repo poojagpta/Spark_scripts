@@ -1,0 +1,32 @@
+Sample Size and number of days experiment should run.
+
+A/B experiment based on hypthesis testing:
+Ho (Null hypothesis): No effect.
+H1: Significant effect.
+           |
+   True    | False
+   Negatuve| Positive (alpha)      Actual
+           | Type I (significance level)
+-----------|---------------
+ False     |.  True Positive
+ Negative  |   
+ (Type II)
+  
+  Predicted value      
+ Type II error: Means incorrectly fail to reject null hypothesis  
+  
+  
+Formula used for sample size = 16 * power((stdv),2)/power(Mimium defectable effect,2).
+
+Number of days = Number of user in each group/number of sample size
+
+If too many experiement going on : significance level /number of tests
+
+Lift: New rate - old rate/old rate
+
+In case of Streaming Lift: 
+(a.play_hours/a.activations) / (b.play_hours/b.activations) -1 
+
+Probability( 97.5) == Z score of (1.96)
+
+(RateA - RateB)/ sqroot( pow(a.stdv,2)/a.activation+ pow(b.stdv,2)/b.activation) )>1.96
